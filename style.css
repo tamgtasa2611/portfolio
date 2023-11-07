@@ -45,6 +45,11 @@ nav a {
   color: white;
 }
 
+nav a:hover {
+  transition: all 0.5s ease;
+  color: steelblue;
+}
+
 .brand {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
@@ -61,25 +66,64 @@ nav a {
   overflow: hidden;
 }
 
-#home-text {
-  animation: fadeIn 1s ease;
-  animation: leftToRight 1s ease;
+.text-1 {
+  animation: fadeIn 2s ease, leftToRight 1.5s ease;
+}
+
+.text-2 {
+  animation: fadeIn 2.5s ease, leftToRight 1.8s ease;
+}
+
+.text-3 {
+  animation: fadeIn 3s ease, leftToRight 2.1s ease;
 }
 
 #home img {
   border-radius: 100%;
   filter: contrast(0.9);
-  animation: fadeIn 1s ease;
-  animation: rightToLeft 1s ease;
+  animation: fadeIn 2s ease, rightToLeft 1.5s ease;
 }
 
 /*
     About
 */
+#about {
+  overflow: hidden;
+}
 
+#about span,
+#about i {
+  color: lightskyblue;
+}
+
+.about-me {
+  animation: fadeIn 2s ease, topToBottom 1.5s ease;
+}
+
+.about-1 {
+  animation: fadeIn 2.5s ease, leftToRight 1.8s ease;
+}
+
+.about-2 {
+  animation: fadeIn 2.5s ease, rightToLeft 1.8s ease;
+}
+
+.sum {
+  animation: fadeIn 3s ease, bottomToTop 2s ease;
+}
 /*
     Skills
 */
+#skills span {
+  color: lightskyblue;
+}
+
+.skill-name:hover {
+  color: lightskyblue;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  transform: scale(1.2);
+}
 
 /*
     Projects
@@ -108,9 +152,19 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
+.bsh-3 {
+  box-shadow: rgba(3, 144, 244, 0.4) 0px 2px 4px,
+    rgba(3, 144, 244, 0.3) 0px 7px 13px -3px,
+    rgba(3, 144, 244, 0.2) 0px -3px 0px inset;
+}
+
 .text-blue {
   color: white;
-  animation: neon 0.08s ease-in-out infinite alternate;
+  animation: neon 0.5s ease-in-out infinite alternate;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 /*
@@ -156,6 +210,24 @@ footer {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes topToBottom {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottomToTop {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 

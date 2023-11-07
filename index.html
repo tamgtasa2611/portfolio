@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.css"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
@@ -17,53 +16,35 @@
     <title>Portfolio - Nguyen Duc Tam</title>
   </head>
   <body class="bg-black bg-gradient scrollbar">
+    <!-- NAV BAR -->
     <nav class="container-fluid text-center position-fixed">
       <div class="row align-items-center h-100">
         <div class="col-1"></div>
 
         <div class="col-2 text-white fs-2 text-start">
-          <a href="#home" class="brand">Tam</a>
+          <a id="brand" href="#home" class="brand">TamND</a>
         </div>
 
         <div class="container-fluid text-center col-4 fs-5">
           <div class="row align-items-center h-100">
             <div class="col text-white">
-              <a class="" href="#about">About</a>
+              <a class="nav-item" href="#about">About</a>
             </div>
             <div class="col text-white">
-              <a class="" href="#skills">Skills</a>
+              <a class="nav-item" href="#skills">Skills</a>
             </div>
             <div class="col text-white">
-              <a class="" href="#projects">Projects</a>
+              <a class="nav-item" href="#projects">Projects</a>
             </div>
             <div class="col text-white">
-              <a class="" href="#contact">Contact</a>
+              <a class="nav-item" href="#contact">Contact</a>
             </div>
           </div>
         </div>
 
-        <div id="mode" class="col-2 text-white text-end">
-          <div class="btn-group">
-            <button
-              class="btn btn-dark dropdown-toggle fs-5"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Mode
-            </button>
-            <ul class="dropdown-menu bg-dark-subtle">
-              <li>
-                <a class="dropdown-item" href="#"
-                  >Dark mode <i class="bi bi-brightness-high-fill fs-5"></i
-                ></a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"
-                  >Light mode <i class="bi bi-moon-fill fs-6"></i
-                ></a>
-              </li>
-            </ul>
+        <div id="mode" class="col-2 text-white">
+          <div class="fs-5 text-end">
+            <a href="">My Resume<i class="bi bi-download ms-2"></i></a>
           </div>
         </div>
 
@@ -71,9 +52,10 @@
       </div>
     </nav>
 
+    <!-- MAIN -->
     <div
       id="home"
-      style="height: 800px"
+      style="height: 620px"
       class="space text-white container-fluid"
     >
       <div class="row">
@@ -81,16 +63,12 @@
         <div class="col-10 container-fluid">
           <div class="row align-items-center">
             <div id="home-text" class="col text-white">
-              <div class="fs-3">
-                Hi there! <i class="bi bi-emoji-smile"></i>
+              <div class="text-1 fs-4">Hi 👋 My name is Tam!</div>
+              <div class="text-2 fs-1 mt-2">
+                I'm a
+                <span class="fs-1 fw-bold text-blue">Web Developer</span>
               </div>
-              <div class="fs-2">
-                I'm
-                <span class="fs-1 fst-italic fw-bold text-blue"
-                  >Nguyen Duc Tam</span
-                >
-              </div>
-              <div class="fs-3">a Web Developer from Vietnam</div>
+              <div class="text-3 fs-6 mt-2">From Hanoi, Vietnam</div>
             </div>
             <div class="col text-end">
               <img src="media/hd.jpg" alt="avatar" width="460px" class="bsh" />
@@ -103,31 +81,89 @@
 
     <div
       id="about"
-      style="height: 800px"
-      class="space text-white container-fluid"
+      style="height: 620px"
+      class="about space text-white container-fluid"
     >
-      <div class="row">
+      <div class="row h-100">
         <div class="col-1"></div>
-        <div class="col-10 bg-danger">About section</div>
+        <div class="col-10">
+          <div class="row">
+            <div class="fs-2 fw-bold about-me">
+              <span class="text-blue">|</span> About me
+            </div>
+          </div>
+          <div class="row fs-4 mt-5 justify-content-between">
+            <div class="col-6 about-1">
+              <div class="about-items about-item-1">
+                <i class="bi bi-person me-2"></i>Full name:
+                <span>Nguyen Duc Tam</span>
+              </div>
+              <div class="about-items about-item-2" class="mt-2">
+                <i class="bi bi-calendar me-2"></i>Date of Birth:
+                <span>November 26, 2004</span>
+              </div>
+            </div>
+            <div class="col-6 about-2">
+              <div class="about-items about-item-3" class="mt-2">
+                <i class="bi bi-geo-alt me-2"></i>Location:
+                <span>Cau Giay, Hanoi, Vietnam</span>
+              </div>
+              <div class="about-items about-item-4" class="mt-2">
+                <i class="bi bi-building me-2"></i>School:
+                <span>BKACAD Academy of Technology</span>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 fs-5">
+            <div class="col-12 text-center fst-italic sum">
+              "I am a sophomore with a strong passion for designing and
+              developing websites. At present, I am seeking an internship
+              opportunity that will allow me to contribute to the organization
+              while expanding my knowledge and real-world skills."
+            </div>
+          </div>
+        </div>
         <div class="col-1"></div>
       </div>
     </div>
 
     <div
       id="skills"
-      style="height: 800px"
+      style="height: 620px"
       class="space text-white container-fluid"
     >
       <div class="row">
         <div class="col-1"></div>
-        <div class="col-10 bg-danger">Skills section</div>
+        <div class="col-10">
+          <div class="row">
+            <div class="fs-2 fw-bold">
+              <span class="text-blue">|</span> My skills
+            </div>
+          </div>
+
+          <div
+            class="row mt-5 fs-4 h-75 align-items-center justify-content-between"
+          >
+            <div class="col-1 skill-name mt-2">HTML</div>
+
+            <div class="col-1 skill-name mt-2">CSS</div>
+
+            <div class="col-2 skill-name mt-2">Bootstrap</div>
+
+            <div class="col-2 skill-name mt-2">JavaScript</div>
+
+            <div class="col-1 skill-name mt-2">PHP</div>
+
+            <div class="col-1 skill-name mt-2">MySQL</div>
+          </div>
+        </div>
         <div class="col-1"></div>
       </div>
     </div>
 
     <div
       id="projects"
-      style="height: 800px"
+      style="height: 620px"
       class="space text-white container-fluid"
     >
       <div class="row">
@@ -139,7 +175,7 @@
 
     <div
       id="contact"
-      style="height: 800px"
+      style="height: 620px"
       class="space text-white container-fluid"
     >
       <div class="row">
@@ -149,6 +185,7 @@
       </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="container-fluid text-white">
       <div class="row align-items-center h-100">
         <div class="text-center">
@@ -158,7 +195,6 @@
       </div>
     </footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="main.js"></script>
   </body>
 </html>
