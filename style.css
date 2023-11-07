@@ -1,0 +1,164 @@
+* {
+  font-family: "Poppins";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+}
+
+/*
+    Scrollbar
+  
+*/
+
+.scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #212529;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 12px;
+  background-color: #212529;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 2px solid #212529;
+}
+
+/*
+    Navigation
+*/
+
+nav {
+  height: 80px;
+  z-index: 10;
+  transition: all 0.2s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.brand {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#mode {
+  transition: all 0.2s ease;
+}
+
+/*
+    Home
+*/
+
+#home {
+  overflow: hidden;
+}
+
+#home-text {
+  animation: fadeIn 1s ease;
+  animation: leftToRight 1s ease;
+}
+
+#home img {
+  border-radius: 100%;
+  filter: contrast(0.9);
+  animation: fadeIn 1s ease;
+  animation: rightToLeft 1s ease;
+}
+
+/*
+    About
+*/
+
+/*
+    Skills
+*/
+
+/*
+    Projects
+*/
+
+/*
+    Contact
+*/
+
+/*
+    Footer
+*/
+footer {
+  height: 60px;
+}
+
+/*
+    More
+*/
+
+.space {
+  padding-top: 120px;
+}
+
+.bsh {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.text-blue {
+  color: white;
+  animation: neon 0.08s ease-in-out infinite alternate;
+}
+
+/*
+  Animation
+*/
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+      0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+      0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+      0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+      0 0 60px rgba(30, 132, 242, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*
+  Media Query
+*/
