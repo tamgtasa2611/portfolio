@@ -7,12 +7,14 @@ html {
 }
 
 body {
+  overflow-x: hidden;
 }
-
 /*
-    Scrollbar
-  
+    Scroll
 */
+html.sr .load-hidden {
+  visibility: hidden;
+}
 
 .scrollbar::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -89,28 +91,36 @@ nav a:hover {
 */
 #about {
   overflow: hidden;
+  margin-top: 80px;
 }
 
-#about span,
-#about i {
+#about span {
   color: lightskyblue;
 }
 
-.about-me {
+/* .about-me {
   animation: fadeIn 2s ease, topToBottom 1.5s ease;
 }
 
-.about-1 {
+.about-item-1 {
   animation: fadeIn 2.5s ease, leftToRight 1.8s ease;
 }
 
-.about-2 {
+.about-item-2 {
+  animation: fadeIn 3s ease, leftToRight 2.2s ease;
+}
+
+.about-item-3 {
   animation: fadeIn 2.5s ease, rightToLeft 1.8s ease;
 }
 
-.sum {
-  animation: fadeIn 3s ease, bottomToTop 2s ease;
+.about-item-4 {
+  animation: fadeIn 3s ease, rightToLeft 2.2s ease;
 }
+
+.sum {
+  animation: fadeIn 2s ease-in, bottomToTop 2.5s ease-out;
+} */
 /*
     Skills
 */
@@ -134,7 +144,7 @@ nav a:hover {
 /*
     Contact
 */
-#contact span {
+#contacts span {
   color: lightskyblue;
 }
 /*
