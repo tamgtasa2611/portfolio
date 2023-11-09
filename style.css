@@ -128,10 +128,29 @@ nav a:hover {
   color: lightskyblue;
 }
 
+.skill-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 120px;
+  height: 60px;
+  position: relative;
+}
+
+.item-img {
+  display: block;
+  position: absolute;
+  top: 140%;
+  transition: all 0.5s ease;
+}
+
 .skill-name:hover {
   color: lightskyblue;
   cursor: pointer;
-  transition: all 0.8s ease;
   transform: scale(1.2);
 }
 
@@ -183,7 +202,17 @@ footer {
     0 0 60px rgba(30, 132, 242, 1);
 }
 
-/*
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+} /*
   Animation
 */
 
@@ -193,6 +222,15 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInHalf {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
   }
 }
 
