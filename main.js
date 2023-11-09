@@ -22,25 +22,25 @@ window.onload = function () {
 //ScrollReveal
 var fadeIn = {
   duration: 1400,
-  reset: true,
   delay: 100,
-  interval: 600,
   easing: "ease",
+  reset: "true",
+  interval: 600,
 };
 var fadeTop = {
-  distance: "20%",
+  distance: "10%",
   origin: "top",
 };
 var fadeLeft = {
-  distance: "20%",
+  distance: "10%",
   origin: "left",
 };
 var fadeRight = {
-  distance: "20%",
+  distance: "10%",
   origin: "right",
 };
 var fadeBottom = {
-  distance: "20%",
+  distance: "10%",
   origin: "bottom",
 };
 
