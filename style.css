@@ -59,14 +59,6 @@ nav a:hover {
   color: lightskyblue;
 }
 
-.brand {
-  font-family: "Pricedown";
-  background: linear-gradient(to right, #30cfd0 -10%, rgb(55, 8, 135) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 #mode {
   transition: all 0.2s ease;
 }
@@ -164,12 +156,13 @@ nav a:hover {
   align-items: center;
   transition: all 0.5s ease;
   position: relative;
+  margin: 16px 0px;
 }
 
 .item-name {
   display: block;
   position: absolute;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   top: 120%;
 }
 
@@ -179,7 +172,8 @@ nav a:hover {
 }
 
 .skill-name:hover {
-  transform: scale(1.2);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 /*
@@ -233,13 +227,13 @@ footer {
 .visible {
   visibility: visible;
   opacity: 0.8;
-  transition: opacity 0.6s linear;
+  transition: opacity 0.5s linear;
 }
 
 .hidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 0.6s, opacity 0.6s linear;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
 } /*
   Animation
 */
