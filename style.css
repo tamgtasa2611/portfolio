@@ -118,9 +118,15 @@ nav a:hover {
   animation: fadeIn 1.5s ease;
 }
 
+.carou-img img {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
 .sum {
   padding: 0px 10%;
 }
+
 /* .about-me {
   animation: fadeIn 2s ease, topToBottom 1.5s ease;
 }
