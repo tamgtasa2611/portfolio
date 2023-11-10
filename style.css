@@ -38,22 +38,33 @@ html.sr .load-hidden {
 nav {
   height: 80px;
   z-index: 10;
-  transition: all 0.2s ease;
-  animation: fadeIn 1s ease-in-out;
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease;
 }
 
+nav .nav-cell {
+  transition: all 0.6s ease;
+}
+nav .nav-cell:hover {
+  transform: scale(1.1);
+}
 nav a {
   text-decoration: none;
   color: white;
+  transition: all 0.6s ease;
 }
 
 nav a:hover {
   transition: all 0.5s ease;
-  color: steelblue;
+  color: lightskyblue;
 }
 
 .brand {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Pricedown";
+  background: linear-gradient(to right, #30cfd0 -10%, rgb(55, 8, 135) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #mode {
@@ -98,6 +109,18 @@ nav a:hover {
   color: lightskyblue;
 }
 
+.carousel-inner {
+  transition: all 0.8s ease;
+}
+
+.carousel-item {
+  transition: all 0.8s ease;
+  animation: fadeIn 1.5s ease;
+}
+
+.sum {
+  padding: 0px 10%;
+}
 /* .about-me {
   animation: fadeIn 2s ease, topToBottom 1.5s ease;
 }
@@ -134,23 +157,22 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
-  border: 1px solid white;
-  border-radius: 10px;
-  width: 120px;
-  height: 60px;
   position: relative;
+}
+
+.item-name {
+  display: block;
+  position: absolute;
+  transition: all 0.5s ease;
+  top: 120%;
 }
 
 .item-img {
   display: block;
-  position: absolute;
-  top: 140%;
   transition: all 0.5s ease;
 }
 
 .skill-name:hover {
-  color: lightskyblue;
-  cursor: pointer;
   transform: scale(1.2);
 }
 
@@ -204,17 +226,21 @@ footer {
 
 .visible {
   visibility: visible;
-  opacity: 1;
-  transition: opacity 0.5s linear;
+  opacity: 0.8;
+  transition: opacity 0.6s linear;
 }
 
 .hidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 0.5s, opacity 0.5s linear;
+  transition: visibility 0s 0.6s, opacity 0.6s linear;
 } /*
   Animation
 */
+
+.trans {
+  transition: all 0.6s ease;
+}
 
 @keyframes fadeIn {
   from {

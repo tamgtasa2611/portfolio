@@ -4,7 +4,13 @@ let skillElement = document.getElementById("#skills");
 let projectElement = document.getElementById("#projects");
 let contactElement = document.getElementById("#contacts");
 let skillsItems = document.querySelectorAll(".skill-name");
+const myCarouselElement = document.querySelector("#myCarousel");
 
+//about me carousel
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 2000,
+  touch: true,
+});
 //add nav bar background when scroll down
 window.onscroll = function () {
   if (window.scrollY >= 10) {
@@ -63,11 +69,11 @@ ScrollReveal().reveal(".contacts", fadeBottom);
 //skills item img
 skillsItems.forEach((item) => {
   item.onmouseover = () => {
-    item.querySelector(".item-img").classList.add("visible");
-    item.querySelector(".item-img").classList.remove("hidden");
+    item.querySelector(".item-name").classList.add("visible");
+    item.querySelector(".item-name").classList.remove("hidden");
   };
   item.onmouseout = () => {
-    item.querySelector(".item-img").classList.remove("visible");
-    item.querySelector(".item-img").classList.add("hidden");
+    item.querySelector(".item-name").classList.remove("visible");
+    item.querySelector(".item-name").classList.add("hidden");
   };
 });

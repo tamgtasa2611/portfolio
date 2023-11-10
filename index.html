@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  </head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.css"
@@ -31,29 +38,34 @@
         <div class="col-1"></div>
 
         <div class="col-2 text-white fs-2 text-start">
-          <a id="brand" href="#home" class="brand">TamND</a>
+          <a id="brand" href="#home" class="nav-cell brand">TamND</a>
         </div>
 
         <div class="container-fluid text-center col-4 fs-5">
           <div class="row align-items-center h-100">
-            <div class="col text-white">
+            <div class="col text-white nav-cell">
               <a class="nav-item" href="#about">About</a>
             </div>
-            <div class="col text-white">
+            <div class="col text-white nav-cell">
               <a class="nav-item" href="#skills">Skills</a>
             </div>
-            <div class="col text-white">
+            <div class="col text-white nav-cell">
               <a class="nav-item" href="#projects">Projects</a>
             </div>
-            <div class="col text-white">
+            <div class="col text-white nav-cell">
               <a class="nav-item" href="#contacts">Contact</a>
             </div>
           </div>
         </div>
 
         <div id="mode" class="col-2 text-white">
-          <div class="fs-5 text-end">
-            <a href="">My Resume<i class="bi bi-download ms-2"></i></a>
+          <div class="fs-5 text-end nav-cell">
+            <a
+              href="media/CV_NguyenDucTam.pdf"
+              download="CV_NguyenDucTam"
+              class="down"
+              >My Resume<i class="bi bi-download ms-2"></i
+            ></a>
           </div>
         </div>
 
@@ -92,51 +104,107 @@
     <div
       id="about"
       style="height: 620px"
-      class=" space text-white container-fluid"
+      class="space text-white container-fluid"
     >
       <div class="row h-100">
         <div class="col-1"></div>
         <div class="col-10 about">
           <div class="row">
             <div class="fs-2 fw-bold about-me text-center neon-text">
-              <span>|</span> About me <span>|</span>
+              <span>|</span> ABOUT ME <span>|</span>
             </div>
           </div>
-          <div class="row fs-4 mt-5 justify-content-between">
+          <!-- <div class="row fs-4 mt-5 justify-content-between">
             <div class="col-6 about-1">
-              <div class="about-items about-item-1">
+              <div class="about-items about-item-1 mb-3">
                 <i class="bi bi-person me-2"></i>Full name:
                 <span>Nguyen Duc Tam</span>
               </div>
-            </div>
-            <div class="col-6 about-2">
-              <div class="about-items about-item-3" class="mt-2">
-                <i class="bi bi-geo-alt me-2"></i>Location:
-                <span>Cau Giay, Hanoi, Vietnam</span>
-              </div>
-            </div>
-          </div>
-          <div class="row fs-4 mt-5 justify-content-between">
-            <div class="col-6">
-              <div class="about-items about-item-2" class="mt-2">
+              <div class="about-items about-item-2 mb-3" class="mt-2">
                 <i class="bi bi-calendar me-2"></i>Date of Birth:
                 <span>November 26, 2004</span>
               </div>
-            </div>
-            <div class="col-6">
+              <div class="about-items about-item-3 mb-3" class="mt-2">
+                <i class="bi bi-geo-alt me-2"></i>Location:
+                <span>Cau Giay, Hanoi, Vietnam</span>
+              </div>
               <div class="about-items about-item-4" class="mt-2">
                 <i class="bi bi-building me-2"></i>School:
                 <span>BKACAD Academy of Technology</span>
               </div>
             </div>
-          </div>
-          <div class="row mt-5 fs-5">
-            <div class="col-12 text-center fst-italic sum ">
-              "I am a sophomore with a strong passion for designing and
-              developing websites. At present, I am seeking an internship
-              opportunity that will allow me to contribute to the organization
-              while expanding my knowledge and real-world skills."
+            <div class="col-6 about-2">
+              <div class="col-12 text-justify fst-italic sum fs-5">
+                "I am a sophomore with a strong passion for designing and
+                developing websites using Front-end and Back-end technologies.
+                At present, I am seeking an internship opportunity that will
+                allow me to contribute to the organization while expanding my
+                knowledge and real-world skills."
+              </div>
             </div>
+          </div> -->
+          <div
+            id="myCarousel"
+            class="row h-75 fs-4 mt-5 carousel slide justify-content-center align-items-center"
+          >
+            <div
+              class="carousel-inner w-75 text-center d-flex align-items-center"
+            >
+              <div class="about-1 carousel-item active h-100">
+                <div class="about-items about-item-1 mb-3">
+                  <i class="bi bi-person me-2"></i>Full name:
+                  <span>Nguyen Duc Tam</span>
+                </div>
+                <div class="about-items about-item-2 mb-3" class="mt-2">
+                  <i class="bi bi-calendar me-2"></i>Date of Birth:
+                  <span>November 26, 2004</span>
+                </div>
+                <div class="about-items about-item-3 mb-3" class="mt-2">
+                  <i class="bi bi-geo-alt me-2"></i>Location:
+                  <span>Cau Giay, Hanoi, Vietnam</span>
+                </div>
+                <div class="about-items about-item-4" class="mt-2">
+                  <i class="bi bi-building me-2"></i>School:
+                  <span>BKACAD Academy of Technology</span>
+                </div>
+              </div>
+              <div class="about-2 carousel-item h-100">
+                <div class="text-center fst-italic sum fs-5 h-100">
+                  "I am a sophomore with a strong passion for designing and
+                  developing websites using
+                  <span class="fw-bold text-success">Front-end</span> and
+                  <span class="fw-bold text-danger">Back-end</span>
+                  technologies. At present, I am seeking an internship
+                  opportunity that will allow me to contribute to the
+                  organization while expanding my knowledge and real-world
+                  skills."
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev trans"
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next trans"
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
         <div class="col-1"></div>
@@ -147,7 +215,7 @@
     <div
       id="skills"
       style="height: 620px"
-      class=" space text-white container-fluid"
+      class="space text-white container-fluid"
     >
       <div class="row">
         <div class="col-1"></div>
@@ -157,48 +225,47 @@
               <span>|</span> MY SKILLS <span>|</span>
             </div>
           </div>
-          
 
           <div class="row mt-5 fs-6 align-items-center justify-content-between">
             <div class="col-1 skill-name mt-2">
-              <div>HTML</div>
-              <div class="item-img hidden">
-                <img src="media/html.PNG" height="50px">
+              <div class="hidden item-name neon-text">HTML</div>
+              <div class="item-img">
+                <img src="media/html.PNG" height="50px" />
               </div>
             </div>
 
             <div class="col-1 skill-name mt-2">
-              <div>CSS</div>
-              <div class="item-img hidden">
-                <img src="media/css.PNG" height="50px">
+              <div class="hidden item-name neon-text">CSS</div>
+              <div class="item-img">
+                <img src="media/css.PNG" height="50px" />
               </div>
             </div>
 
             <div class="col-2 skill-name mt-2">
-              <div>Bootstrap</div>
-              <div class="item-img hidden">
-                <img src="media/bootstrap.PNG" height="50px">
+              <div class="hidden item-name neon-text">Bootstrap</div>
+              <div class="item-img">
+                <img src="media/bootstrap.PNG" height="50px" />
               </div>
             </div>
 
             <div class="col-2 skill-name mt-2">
-              <div>JavaScript</div>
-              <div class="item-img hidden">
-                <img src="media/js.PNG" height="50px">
+              <div class="hidden item-name neon-text">JavaScript</div>
+              <div class="item-img">
+                <img src="media/js.PNG" height="50px" />
               </div>
             </div>
 
             <div class="col-1 skill-name mt-2">
-              <div>PHP</div>
-              <div class="item-img hidden">
-                <img src="media/php.PNG" height="50px">
+              <div class="hidden item-name neon-text">PHP</div>
+              <div class="item-img">
+                <img src="media/php.PNG" height="50px" />
               </div>
             </div>
 
             <div class="col-1 skill-name mt-2">
-              <div>MySQL</div>
-              <div class="item-img hidden">
-                <img src="media/mysql.PNG" height="50px">
+              <div class="hidden item-name neon-text">MySQL</div>
+              <div class="item-img">
+                <img src="media/mysql.PNG" height="50px" />
               </div>
             </div>
           </div>
@@ -211,7 +278,7 @@
     <div
       id="projects"
       style="height: 620px"
-      class=" space text-white container-fluid"
+      class="space text-white container-fluid"
     >
       <div class="row">
         <div class="col-1"></div>
@@ -230,7 +297,7 @@
     <div
       id="contacts"
       style="height: 620px"
-      class=" space text-white container-fluid"
+      class="space text-white container-fluid"
     >
       <div class="row">
         <div class="col-1"></div>
@@ -253,9 +320,13 @@
           reserved
         </div>
       </div>
-</footer>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="main.js"></script>
   </body>
