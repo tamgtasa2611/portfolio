@@ -1,3 +1,27 @@
+:root {
+  --blue-1: rgb(187, 225, 250);
+  --blue-2: rgb(50, 130, 184);
+  --blue-3: rgb(15, 76, 117);
+  --blue-4: rgb(27, 38, 44);
+  --blue-5: rgb(8, 11, 13);
+}
+
+.bg-blue-1 {
+  background-color: var(--blue-1);
+}
+.bg-blue-2 {
+  background-color: var(--blue-2);
+}
+.bg-blue-3 {
+  background-color: var(--blue-3);
+}
+.bg-blue-4 {
+  background-color: var(--blue-4);
+}
+.bg-blue-5 {
+  background-color: var(--blue-5);
+}
+/* style */
 * {
   font-family: "Poppins";
 }
@@ -9,6 +33,7 @@ html {
 body {
   overflow-x: hidden;
 }
+
 /*
     Scroll
 */
@@ -38,7 +63,7 @@ html.sr .load-hidden {
 nav {
   height: 80px;
   z-index: 10;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   animation: fadeIn 1s ease;
 }
 
@@ -56,7 +81,7 @@ nav a {
 
 nav a:hover {
   transition: all 0.5s ease;
-  color: steelblue;
+  color: var(--blue-2);
 }
 
 #mode {
@@ -77,14 +102,14 @@ nav a:hover {
 .list-menu i:hover {
   transition: all 0.5s ease;
   cursor: pointer;
-  color: steelblue;
+  color: var(--blue-2);
 }
 .list-dropdown {
   transition: all 0.5s ease;
   position: fixed;
   right: 0;
   z-index: 20;
-  background-color: rgb(33, 37, 41);
+  background-color: var(--blue-4);
   height: 100vh;
   width: 25%;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -96,16 +121,8 @@ nav a:hover {
   color: white;
 }
 .list-dropdown a:hover {
-  color: steelblue;
+  color: var(--blue-2);
 }
-/* .close-btn {
-  transition: all 0.6s ease;
-  padding: 12px;
-}
-.close-btn:hover {
-  cursor: pointer;
-  color: steelblue !important;
-} */
 /*
     Home
 */
@@ -141,7 +158,15 @@ nav a:hover {
 }
 
 #about span {
-  color: lightskyblue;
+  color: var(--blue-1);
+}
+
+.about-1 {
+  color: var(--blue-2);
+}
+
+.about-2 {
+  font-size: 1.25rem;
 }
 
 .carousel-inner {
@@ -165,34 +190,11 @@ nav a:hover {
   transform: scale(1.2);
 }
 
-/* .about-me {
-  animation: fadeIn 2s ease, topToBottom 1.5s ease;
-}
-
-.about-item-1 {
-  animation: fadeIn 2.5s ease, leftToRight 1.8s ease;
-}
-
-.about-item-2 {
-  animation: fadeIn 3s ease, leftToRight 2.2s ease;
-}
-
-.about-item-3 {
-  animation: fadeIn 2.5s ease, rightToLeft 1.8s ease;
-}
-
-.about-item-4 {
-  animation: fadeIn 3s ease, rightToLeft 2.2s ease;
-}
-
-.sum {
-  animation: fadeIn 2s ease-in, bottomToTop 2.5s ease-out;
-} */
 /*
     Skills
 */
 #skills span {
-  color: lightskyblue;
+  color: var(--blue-1);
 }
 
 .skill-name {
@@ -226,13 +228,13 @@ nav a:hover {
     Projects
 */
 #projects span {
-  color: lightskyblue;
+  color: var(--blue-1);
 }
 /*
     Contact
 */
 #contacts span {
-  color: lightskyblue;
+  color: var(--blue-1);
 }
 /*
     Footer
@@ -378,6 +380,10 @@ footer {
 }
 
 @media all and (width <= 992px) {
+  nav {
+    background-color: var(--blue-5) !important;
+  }
+
   nav .list-menu-item {
     transition: all 0.5s ease;
     display: none;
@@ -411,10 +417,32 @@ footer {
 }
 
 @media all and (768px < width <= 992px) {
+  .list-dropdown {
+    width: 35%;
+  }
 }
 
 @media all and (576px < width <= 768px) {
+  .list-dropdown {
+    width: 40%;
+  }
 }
 
 @media all and (width <= 576px) {
+  .list-dropdown {
+    width: 60%;
+  }
+
+  .about-1,
+  .about-2 {
+    font-size: 1rem;
+  }
+
+  .item-img img {
+    height: 40px;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
 }

@@ -42,10 +42,10 @@ window.onclick = function (event) {
 //add nav bar background when scroll down
 window.onscroll = function () {
   if (window.scrollY >= 10) {
-    navElement.classList.add("bg-dark");
+    navElement.classList.add("bg-blue-4");
     navElement.classList.add("bsh");
   } else {
-    navElement.classList.remove("bg-dark");
+    navElement.classList.remove("bg-blue-4");
     navElement.classList.remove("bsh");
   }
 };
