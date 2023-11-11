@@ -129,6 +129,9 @@ nav a:hover {
 
 #home {
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text-1 {
@@ -433,9 +436,34 @@ footer {
     width: 60%;
   }
 
+  #home {
+    height: 680px;
+  }
+
+  #home .row {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #home .div480 {
+    height: 480px;
+  }
+
+  .div480 .col {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .about-1,
   .about-2 {
     font-size: 1rem;
+  }
+
+  #about img {
+    width: 100%;
   }
 
   .item-img img {
@@ -443,6 +471,15 @@ footer {
   }
 
   footer {
+    font-size: 0.75rem;
+  }
+}
+
+@media all and (width <= 400px) {
+  .about-1 {
+    font-size: 0.9rem;
+  }
+  .about-2 {
     font-size: 0.75rem;
   }
 }
