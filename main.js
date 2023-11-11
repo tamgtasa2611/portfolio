@@ -5,12 +5,40 @@ let projectElement = document.getElementById("#projects");
 let contactElement = document.getElementById("#contacts");
 let skillsItems = document.querySelectorAll(".skill-name");
 const myCarouselElement = document.querySelector("#myCarousel");
+let listMenu = document.querySelector(".bi-list");
+let listDropdown = document.querySelector(".list-dropdown");
+let closeBtn = document.querySelector(".close-btn");
+let navItems = document.querySelectorAll(".nav-item");
+let menu = document.getElementById("#menu");
 
-//about me carousel
-const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval: 2000,
-  touch: true,
+//List menu
+listMenu.onclick = function () {
+  listDropdown.classList.remove("d-none");
+  listDropdown.style.animation = "rightToLeft 0.6s";
+};
+
+navItems.forEach((item) => {
+  item.onclick = function () {
+    listDropdown.style.animation = "";
+    listDropdown.style.animation = "rightOut 800ms";
+    setTimeout(() => {
+      listDropdown.classList.add("d-none");
+    }, 300);
+  };
 });
+
+window.onclick = function (event) {
+  if (event.target != listMenu) {
+    if (event.target != listDropdown) {
+      listDropdown.style.animation = "";
+      listDropdown.style.animation = "rightOut 1s";
+      setTimeout(() => {
+        listDropdown.classList.add("d-none");
+      }, 300);
+    }
+  }
+};
+
 //add nav bar background when scroll down
 window.onscroll = function () {
   if (window.scrollY >= 10) {
@@ -26,13 +54,17 @@ window.onload = function () {
   window.scrollTo(0, 0);
 };
 
+//about me carousel
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 2000,
+  touch: true,
+});
+
 //ScrollReveal
 var fadeIn = {
   duration: 1400,
   delay: 100,
   easing: "ease",
-  reset: "true",
-  interval: 600,
 };
 var fadeTop = {
   distance: "10%",

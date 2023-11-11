@@ -41,7 +41,7 @@
           <a id="brand" href="#home" class="nav-cell brand">TamND</a>
         </div>
 
-        <div class="container-fluid text-center col-4 fs-5">
+        <div class="container-fluid text-center col-4 fs-5 list-menu-item">
           <div class="row align-items-center h-100">
             <div class="col text-white nav-cell">
               <a class="nav-item" href="#about">About</a>
@@ -58,20 +58,56 @@
           </div>
         </div>
 
-        <div id="mode" class="col-2 text-white">
-          <div class="fs-5 text-end nav-cell">
+        <div id="mode" class="col-2 text-white fs-5 list-menu-item">
+          <div class="w-100">
             <a
               href="media/CV_NguyenDucTam.pdf"
               download="CV_NguyenDucTam"
-              class="down"
+              class="nav-cell down"
               >My Resume<i class="bi bi-download ms-2"></i
             ></a>
           </div>
         </div>
 
+        <div class="d-none col-7 space-7"></div>
+
+        <div class="d-none text-white col-1 fs-1 list-menu">
+          <i class="bi bi-list"></i>
+        </div>
         <div class="col-1"></div>
       </div>
     </nav>
+
+    <!-- menu -->
+
+    <div
+      class="list-dropdown d-none fs-6 d-flex flex-column justify-content-around align-items-center"
+    >
+      <div class="text-white nav-cell p-3 text-center">
+        <a class="nav-item text-decoration-none" href="#about">ABOUT</a>
+      </div>
+
+      <div class="text-white nav-cell p-3 text-center">
+        <a class="nav-item text-decoration-none" href="#skills">SKILLS</a>
+      </div>
+
+      <div class="text-white nav-cell p-3 text-center">
+        <a class="nav-item text-decoration-none" href="#projects">PROJECTS</a>
+      </div>
+
+      <div class="text-white nav-cell p-3 text-center">
+        <a class="nav-item text-decoration-none" href="#contacts">CONTACT</a>
+      </div>
+
+      <div class="text-white nav-cell p-3 text-center">
+        <a
+          href="media/CV_NguyenDucTam.pdf"
+          download="CV_NguyenDucTam"
+          class="nav-cell text-decoration-none"
+          >MY RESUME<i class="bi bi-download ms-2"></i
+        ></a>
+      </div>
+    </div>
 
     <!-- HERO -->
     <div
@@ -87,7 +123,9 @@
               <div class="text-1 fs-4">Hi 👋 My name is Tam!</div>
               <div class="text-2 fs-1 mt-2">
                 I'm a
-                <span class="fs-1 fw-bold neon-text">Web Developer</span>
+                <span class="text-2-2 fs-1 fw-bold neon-text"
+                  >Web Developer</span
+                >
               </div>
               <div class="text-3 fs-6 mt-2">From Hanoi, Vietnam</div>
             </div>
@@ -192,7 +230,7 @@
               </div>
             </div>
             <button
-              class="carousel-control-prev trans"
+              class="carousel-control-prev trans carou-btn"
               type="button"
               data-bs-target="#myCarousel"
               data-bs-slide="prev"
@@ -204,7 +242,7 @@
               <span class="visually-hidden">Previous</span>
             </button>
             <button
-              class="carousel-control-next trans"
+              class="carousel-control-next trans carou-btn"
               type="button"
               data-bs-target="#myCarousel"
               data-bs-slide="next"
@@ -284,67 +322,67 @@
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">HTML</div>
               <div class="item-img">
-                <img src="media/html.png" height="80px" />
+                <img src="media/html.png" height="60px" />
               </div>
             </div>
 
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">CSS</div>
               <div class="item-img">
-                <img src="media/css.png" height="80px" />
+                <img src="media/css.png" height="60px" />
               </div>
             </div>
 
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">Bootstrap</div>
               <div class="item-img">
-                <img src="media/bootstrap.png" height="80px" />
+                <img src="media/bootstrap.png" height="60px" />
               </div>
             </div>
           </div>
 
-          <div class="row mt-5 fs-6 align-items-center justify-content-between">
+          <div class="row mt-4 fs-6 align-items-center justify-content-between">
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">JavaScript</div>
               <div class="item-img">
-                <img src="media/js.png" height="80px" />
+                <img src="media/js.png" height="60px" />
               </div>
             </div>
 
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">PHP</div>
               <div class="item-img">
-                <img src="media/php.png" height="80px" />
+                <img src="media/php.png" height="60px" />
               </div>
             </div>
 
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">MySQL</div>
               <div class="item-img">
-                <img src="media/mysql.png" height="80px" />
+                <img src="media/mysql.png" height="60px" />
               </div>
             </div>
           </div>
 
-          <div class="row mt-5 fs-6 align-items-center justify-content-between">
+          <div class="row mt-4 fs-6 align-items-center justify-content-between">
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">Git</div>
               <div class="item-img">
-                <img src="media/git.png" height="80px" />
+                <img src="media/git.png" height="60px" />
               </div>
             </div>
 
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">Adobe Photoshop</div>
               <div class="item-img">
-                <img src="media/pts.png" height="80px" />
+                <img src="media/pts.png" height="60px" />
               </div>
             </div>
 
             <div class="col-3 skill-name mt-2">
               <div class="hidden item-name neon-text">Sony Vegas</div>
               <div class="item-img">
-                <img src="media/vegas.png" height="80px" />
+                <img src="media/vegas.png" height="60px" />
               </div>
             </div>
           </div>
