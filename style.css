@@ -239,11 +239,55 @@ nav a:hover {
 #contacts span {
   color: var(--blue-1);
 }
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--blue-2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+label {
+  color: var(--blue-2);
+}
+
+input {
+  color: white !important;
+  background-color: var(--blue-4) !important ;
+}
+
+.send-btn {
+  background-color: var(--blue-2);
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.send-btn:hover {
+  background-color: var(--blue-3);
+  color: var(--blue-1);
+  box-shadow: rgba(50, 130, 184, 0.5) 0 5px 30px -5px;
+}
+
+.h-90 {
+  height: 90% !important;
+}
 /*
     Footer
 */
 footer {
   height: 60px;
+  animation: fadeIn 1s;
 }
 
 /*
@@ -468,6 +512,16 @@ footer {
 
   .item-img img {
     height: 40px;
+  }
+
+  #contacts {
+    height: 840px !important;
+  }
+
+  .contact-info {
+    margin-top: 24px;
+    font-size: 1rem !important;
+    text-align: center;
   }
 
   footer {
