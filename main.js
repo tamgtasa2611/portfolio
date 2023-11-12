@@ -13,16 +13,12 @@ let navItems = document.querySelectorAll(".nav-item");
 let menu = document.getElementById("#menu");
 
 listMenu.onclick = function () {
-  listMenu.style.animation = "fadeOut 500ms";
-  listMenu.classList.add("d-none");
   listDropdown.classList.remove("d-none");
-  listDropdown.style.animation = "rightToLeft 600ms, fadeIn 500ms";
+  listDropdown.style.animation = "rightToLeft 600ms, fadeIn 200ms";
 };
 
 navItems.forEach((item) => {
   item.onclick = function () {
-    listMenu.classList.remove("d-none");
-    listMenu.style.animation = "fadeIn 500ms";
     listDropdown.style.animation = "";
     listDropdown.style.animation = "rightOut 1s, fadeOut 1s";
     setTimeout(() => {
@@ -34,8 +30,6 @@ navItems.forEach((item) => {
 window.onclick = function (event) {
   if (event.target != listMenu) {
     if (event.target != listDropdown) {
-      listMenu.classList.remove("d-none");
-      listMenu.style.animation = "fadeIn 500ms";
       listDropdown.style.animation = "";
       listDropdown.style.animation = "rightOut 1s, fadeOut 1s";
       setTimeout(() => {
@@ -104,6 +98,12 @@ ScrollReveal().reveal(".contact-info", fadeLeft);
 ScrollReveal().reveal(".contact-form", fadeIn);
 ScrollReveal().reveal(".contact-form", fadeRight);
 
+//Click about image
+let aboutImages = document.querySelectorAll(".carou-img");
+aboutImages.forEach((img) => {
+  img.onclick = function () {};
+});
+
 //skills item img
 skillsItems.forEach((item) => {
   item.onmouseover = () => {
@@ -117,12 +117,7 @@ skillsItems.forEach((item) => {
 });
 
 //form submit
-let nameInput = document.querySelector("#name-form");
-let emailInput = document.querySelector("#email");
-let subjectInput = document.querySelector("#subject");
-let messageInput = document.querySelector("#message");
 let submitBtn = document.querySelector(".send-btn");
-let date = new Date();
 
 $("#msg-form").on("submit", function (event) {
   event.preventDefault(); // prevent reload
