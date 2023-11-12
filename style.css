@@ -193,6 +193,12 @@ nav a:hover {
   color: var(--blue-1);
 }
 
+#about i {
+  padding: 12px 16px;
+  font-size: 1.25rem;
+  border-radius: var(--bs-border-radius);
+}
+
 .about-1 {
   color: var(--blue-2);
 }
@@ -270,10 +276,14 @@ nav a:hover {
 }
 
 .contact-info {
-  height: 90%;
+  height: 440px;
   display: flex;
   flex-direction: column;
   color: var(--blue-2);
+}
+
+.contact-text {
+  text-align: start;
 }
 
 #contacts i {
@@ -283,7 +293,7 @@ nav a:hover {
 }
 
 .contact-form {
-  height: 90%;
+  height: 440px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -480,6 +490,23 @@ footer span {
     transition: all 0.5s ease;
     width: 80%;
   }
+
+  #contacts .contact-info .contact-header {
+    font-size: calc(1.325rem + 0.9vw) !important;
+  }
+
+  #contacts .contact-info .contact-sub-header {
+    font-size: 1rem !important;
+  }
+
+  #contacts .contact-text {
+    font-size: 0.75rem !important;
+  }
+
+  #contacts label,
+  input {
+    font-size: 0.75rem !important;
+  }
 }
 
 @media all and (width <= 992px) {
@@ -498,6 +525,25 @@ footer span {
     display: block !important;
     animation: fadeIn 0.8s;
   }
+
+  #contacts {
+    height: 1000px !important;
+    margin-bottom: 80px;
+  }
+
+  #contacts .contact-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  #contacts .main-row {
+    flex-direction: column;
+  }
+
+  #contacts .contact-form {
+    margin-top: 40px;
+    width: 100%;
+  }
 }
 
 @media all and (width <= 768px) {
@@ -511,7 +557,12 @@ footer span {
   #home .text-3 {
     font-size: 0.75rem;
   }
+
+  #contacts {
+    height: 1000px !important;
+  }
 }
+
 @media all and (992px < width <= 1200px) {
 }
 
@@ -567,13 +618,37 @@ footer span {
   }
 
   #contacts {
-    height: 840px !important;
+    height: 1000px !important;
   }
 
   .contact-info {
     margin-top: 24px;
     font-size: 1rem !important;
     text-align: center;
+  }
+
+  #contacts .text-div {
+    flex-direction: column;
+  }
+
+  #contacts .contact-text-div {
+    height: 80px !important;
+    width: 100% !important;
+  }
+
+  #contacts .contact-text {
+    font-size: 0.75rem !important;
+  }
+
+  #contacts .contact-text-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contacts .contact-text-header .text-div {
+    align-items: start !important;
+    height: 140px;
+    margin: 0 !important;
   }
 
   footer {
@@ -587,5 +662,17 @@ footer span {
   }
   .about-2 {
     font-size: 0.75rem;
+  }
+
+  #contacts .contact-text {
+    font-size: 0.6rem !important;
+  }
+
+  #contacts .contact-form {
+    margin-top: 100px;
+  }
+
+  #contacts {
+    height: 1100px !important;
   }
 }
