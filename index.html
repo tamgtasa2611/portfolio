@@ -31,14 +31,14 @@
     <title>Portfolio - Nguyen Duc Tam</title>
   </head>
 
-  <body class="bg-blue-5 scrollbar">
+  <body class="bg-blue-4 scrollbar">
     <!-- NAV BAR -->
     <nav class="container-fluid text-center position-fixed">
       <div class="row align-items-center h-100">
         <div class="col-1"></div>
 
         <div class="col-2 text-white fs-2 text-start">
-          <a id="brand" href="#home" class="nav-cell brand">TamND</a>
+          <a id="brand" href="#home" class="nav-cell brand">Tam</a>
         </div>
 
         <div class="container-fluid text-center col-4 fs-5 list-menu-item">
@@ -80,7 +80,7 @@
 
     <!-- menu -->
     <div
-      class="list-dropdown d-none fs-6 d-flex flex-column justify-content-evenly align-items-center"
+      class="list-dropdown bsh d-none fs-6 d-flex flex-column justify-content-evenly align-items-center"
     >
       <div class="text-white nav-cell p-2 text-center">
         <a class="nav-item text-decoration-none" href="#about">ABOUT</a>
@@ -191,12 +191,22 @@
               </div>
               <div class="carousel-item h-100">
                 <div class="carou-img">
-                  <img src="media/award.jpg" alt="my_award" width="680px" />
+                  <img
+                    src="media/award.jpg"
+                    alt="my_award"
+                    width="680px"
+                    class="bsh"
+                  />
                 </div>
               </div>
               <div class="carousel-item h-100">
                 <div class="carou-img">
-                  <img src="media/toeic.jpg" alt="my_award" width="680px" />
+                  <img
+                    src="media/toeic.jpg"
+                    alt="my_award"
+                    width="680px"
+                    class="bsh"
+                  />
                 </div>
               </div>
             </div>
@@ -354,51 +364,110 @@
       <div class="row h-100">
         <div class="col-1"></div>
         <div class="col-10 contacts">
-          <div class="row">
-            <div class="fs-2 fw-bold text-center neon-text">
-              <span>|</span> CONTACT ME <span>|</span>
-            </div>
-          </div>
+          <div class="row h-100 justify-content-between">
+            <div
+              class="col-6 contact-info fs-5 d-flex flex-column justify-content-between"
+            >
+              <div class="fs-1 fw-bold neon-text text-white">
+                HAVE ANY QUESTIONS?
+                <div class="text-white">GET IN TOUCH WITH ME</div>
+              </div>
 
-          <div class="row h-90">
-            <div class="col contact-info fs-5">
-              <div class="mb-3">
-                <i class="bi bi-telephone me-2"></i>Phone number:
-                <span class="text-white">+84 386 424 311</span>
+              <div class="fs-5 text-white">
+                Please fill out the form and let me know how can I help. I will
+                be in touch with you as soon as possible!
               </div>
-              <div class="mb-3">
-                <i class="bi bi-envelope me-2"></i>Email address:
-                <span class="text-white">tamnd.business@gmail.com</span>
-              </div>
-              <div class="mb-3">
-                <i class="bi bi-info-circle me-2"></i>Linkedin:
-                <span
-                  ><a
-                    href="https://www.linkedin.com/in/tam-nd"
-                    class="text-white text-decoration-none"
-                    >www.linkedin.com/in/tam-nd</a
-                  ></span
+
+              <div>
+                <div
+                  class="mb-4 d-flex align-items-center justify-content-between"
                 >
+                  <div class="d-flex w-50 align-items-center">
+                    <div><i class="bsh bi bi-telephone me-2"></i></div>
+                    <div class="text-white">
+                      <div class="fs-6 text-blue-2">Phone number</div>
+                      <div class="fs-6">+84 386 424 311</div>
+                    </div>
+                  </div>
+                  <div class="d-flex w-50 align-items-center">
+                    <div><i class="bsh bi bi-envelope me-2"></i></div>
+                    <div class="text-white">
+                      <div class="fs-6 text-blue-2">Email</div>
+                      <div class="fs-6">tamnd.business@gmail.com</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex w-50 align-items-center">
+                    <div><i class="bsh bi bi-geo-alt me-2"></i></div>
+                    <div class="text-white">
+                      <div class="fs-6 text-blue-2">Address</div>
+                      <div class="fs-6">Cau Giay, Hanoi, Vietnam</div>
+                    </div>
+                  </div>
+                  <div class="d-flex w-50 align-items-center">
+                    <div><i class="bsh bi bi-info-circle me-2"></i></div>
+                    <div class="text-white">
+                      <div class="fs-6 text-blue-2">Linkedin</div>
+                      <div class="fs-6">
+                        <a
+                          href="https://www.linkedin.com/in/tam-nd"
+                          class="text-white text-decoration-none"
+                          >www.linkedin.com/in/tam-nd</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col contact-form">
+
+            <div class="col-5 contact-form">
               <form
                 action=""
-                class="form-control bg-blue-4 d-flex flex-column justify-content-center align-items-center"
+                class="form-control bg-blue-4 d-flex flex-column justify-content-center align-items-center bsh"
               >
-                <div class="mb-3 w-100">
-                  <label for="" class="form-label">Name </label>
-                  <input type="text" class="form-control" />
+                <div class="mb-1 w-100 d-flex p-0">
+                  <div>
+                    <label for="" class="form-label">Name </label>
+                    <input
+                      placeholder="Your name"
+                      required
+                      type="text"
+                      class="form-control text-white"
+                    />
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Email </label>
+                    <input
+                      placeholder="Your email address"
+                      required
+                      type="email"
+                      class="form-control text-white"
+                    />
+                  </div>
                 </div>
-                <div class="mb-3 w-100">
-                  <label for="" class="form-label">Email </label>
-                  <input type="text" class="form-control" />
+                <div class="mb-1 w-100">
+                  <label for="" class="form-label">Subject </label>
+                  <input
+                    placeholder="Your subject"
+                    required
+                    type="text"
+                    class="form-control text-white"
+                  />
                 </div>
-                <div class="mb-3 w-100">
+                <div class="mb-1 w-100">
                   <label for="" class="form-label">Message </label>
-                  <input class="form-control" />
+                  <input
+                    placeholder="Write your message..."
+                    required
+                    class="form-control text-white"
+                  />
                 </div>
-                <button class="mb-3 btn send-btn w-25">Send</button>
+                <div class="mb-1 w-100">
+                  <button class="btn send-btn p-2 bsh fs-6">Send</button>
+                </div>
               </form>
             </div>
           </div>
@@ -411,8 +480,7 @@
     <footer class="container-fluid text-white">
       <div class="row align-items-center h-100">
         <div class="text-center">
-          ©️ 2023 <span class="text-secondary">Nguyen Duc Tam</span>. All rights
-          reserved
+          ©️ 2023 <span>Nguyen Duc Tam</span>. All rights reserved
         </div>
       </div>
     </footer>

@@ -3,6 +3,8 @@ let aboutElement = document.getElementById("#about");
 let skillElement = document.getElementById("#skills");
 let projectElement = document.getElementById("#projects");
 let contactElement = document.getElementById("#contacts");
+let contactText = document.querySelector(".contact-info");
+let contactForm = document.querySelector(".contact-form");
 let skillsItems = document.querySelectorAll(".skill-name");
 const myCarouselElement = document.querySelector("#myCarousel");
 let listMenu = document.querySelector(".bi-list");
@@ -13,28 +15,34 @@ let menu = document.getElementById("#menu");
 
 //List menu
 listMenu.onclick = function () {
+  listMenu.style.animation = "fadeOut 500ms";
+  listMenu.classList.add("d-none");
   listDropdown.classList.remove("d-none");
-  listDropdown.style.animation = "rightToLeft 0.6s";
+  listDropdown.style.animation = "rightToLeft 600ms, fadeIn 500ms";
 };
 
 navItems.forEach((item) => {
   item.onclick = function () {
+    listMenu.classList.remove("d-none");
+    listMenu.style.animation = "fadeIn 500ms";
     listDropdown.style.animation = "";
-    listDropdown.style.animation = "rightOut 800ms";
+    listDropdown.style.animation = "rightOut 1s, fadeOut 1s";
     setTimeout(() => {
       listDropdown.classList.add("d-none");
-    }, 300);
+    }, 500);
   };
 });
 
 window.onclick = function (event) {
   if (event.target != listMenu) {
     if (event.target != listDropdown) {
+      listMenu.classList.remove("d-none");
+      listMenu.style.animation = "fadeIn 500ms";
       listDropdown.style.animation = "";
-      listDropdown.style.animation = "rightOut 1s";
+      listDropdown.style.animation = "rightOut 1s, fadeOut 1s";
       setTimeout(() => {
         listDropdown.classList.add("d-none");
-      }, 300);
+      }, 500);
     }
   }
 };
@@ -50,9 +58,9 @@ window.onscroll = function () {
   }
 };
 
-window.onload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onload = function () {
+//   window.scrollTo(0, 0);
+// };
 
 //about me carousel
 const carousel = new bootstrap.Carousel(myCarouselElement, {
@@ -71,15 +79,15 @@ var fadeTop = {
   origin: "top",
 };
 var fadeLeft = {
-  distance: "10%",
+  distance: "20%",
   origin: "left",
 };
 var fadeRight = {
-  distance: "10%",
+  distance: "20%",
   origin: "right",
 };
 var fadeBottom = {
-  distance: "40%",
+  distance: "10%",
   origin: "bottom",
 };
 
@@ -95,8 +103,10 @@ ScrollReveal().reveal(".projects", fadeIn);
 ScrollReveal().reveal(".projects", fadeBottom);
 
 //CONTACTS
-ScrollReveal().reveal(".contacts", fadeIn);
-ScrollReveal().reveal(".contacts", fadeBottom);
+ScrollReveal().reveal(".contact-info", fadeIn);
+ScrollReveal().reveal(".contact-info", fadeLeft);
+ScrollReveal().reveal(".contact-form", fadeIn);
+ScrollReveal().reveal(".contact-form", fadeRight);
 
 //skills item img
 skillsItems.forEach((item) => {
