@@ -7,6 +7,14 @@
   --bs-border-radius: 0.375rem;
 }
 
+@font-face {
+  font-family: "Nature Beauty Personal Use Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Nature Beauty Personal Use Regular"),
+    url("Nature Beauty Personal Use.woff") format("woff");
+}
+
 .bg-blue-1 {
   background-color: var(--blue-1);
 }
