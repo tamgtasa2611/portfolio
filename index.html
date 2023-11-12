@@ -27,6 +27,11 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
 
     <title>Portfolio - Nguyen Duc Tam</title>
   </head>
@@ -464,13 +469,17 @@
 
             <div class="col-5 contact-form">
               <form
+                id="msg-form"
                 action=""
+                method="post"
                 class="form-control bg-blue-4 d-flex flex-column justify-content-center align-items-center bsh"
               >
                 <div class="mb-1 w-100 d-flex p-0">
                   <div>
-                    <label for="" class="form-label">Name </label>
+                    <label for="name-form" class="form-label">Name </label>
                     <input
+                      id="name-form"
+                      name="name"
                       placeholder="Your name"
                       required
                       type="text"
@@ -478,8 +487,10 @@
                     />
                   </div>
                   <div>
-                    <label for="" class="form-label">Email </label>
+                    <label for="email" class="form-label">Email </label>
                     <input
+                      id="email"
+                      name="email"
                       placeholder="Your email address"
                       required
                       type="email"
@@ -488,8 +499,10 @@
                   </div>
                 </div>
                 <div class="mb-1 w-100">
-                  <label for="" class="form-label">Subject </label>
+                  <label for="subject" class="form-label">Subject </label>
                   <input
+                    id="subject"
+                    name="subject"
                     placeholder="Your subject"
                     required
                     type="text"
@@ -497,15 +510,19 @@
                   />
                 </div>
                 <div class="mb-1 w-100">
-                  <label for="" class="form-label">Message </label>
+                  <label for="message" class="form-label">Message </label>
                   <input
+                    id="message"
+                    name="message"
                     placeholder="Write your message..."
                     required
                     class="form-control text-white"
                   />
                 </div>
                 <div class="mb-1 w-100">
-                  <button class="btn send-btn p-2 bsh fs-6">Send</button>
+                  <button type="submit" class="btn send-btn p-2 bsh fs-6">
+                    Send
+                  </button>
                 </div>
               </form>
             </div>

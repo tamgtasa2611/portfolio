@@ -1,4 +1,3 @@
-let navElement = document.querySelector("nav");
 let aboutElement = document.getElementById("#about");
 let skillElement = document.getElementById("#skills");
 let projectElement = document.getElementById("#projects");
@@ -6,14 +5,13 @@ let contactElement = document.getElementById("#contacts");
 let contactText = document.querySelector(".contact-info");
 let contactForm = document.querySelector(".contact-form");
 let skillsItems = document.querySelectorAll(".skill-name");
-const myCarouselElement = document.querySelector("#myCarousel");
+
+//List menu
 let listMenu = document.querySelector(".bi-list");
 let listDropdown = document.querySelector(".list-dropdown");
-let closeBtn = document.querySelector(".close-btn");
 let navItems = document.querySelectorAll(".nav-item");
 let menu = document.getElementById("#menu");
 
-//List menu
 listMenu.onclick = function () {
   listMenu.style.animation = "fadeOut 500ms";
   listMenu.classList.add("d-none");
@@ -48,6 +46,7 @@ window.onclick = function (event) {
 };
 
 //add nav bar background when scroll down
+let navElement = document.querySelector("nav");
 window.onscroll = function () {
   if (window.scrollY >= 10) {
     navElement.classList.add("bg-blue-4");
@@ -58,11 +57,8 @@ window.onscroll = function () {
   }
 };
 
-// window.onload = function () {
-//   window.scrollTo(0, 0);
-// };
-
-//about me carousel
+//carousel
+const myCarouselElement = document.querySelector("#myCarousel");
 const carousel = new bootstrap.Carousel(myCarouselElement, {
   interval: 2000,
   touch: true,
@@ -118,4 +114,36 @@ skillsItems.forEach((item) => {
     item.querySelector(".item-name").classList.remove("visible");
     item.querySelector(".item-name").classList.add("hidden");
   };
+});
+
+//form submit
+let nameInput = document.querySelector("#name-form");
+let emailInput = document.querySelector("#email");
+let subjectInput = document.querySelector("#subject");
+let messageInput = document.querySelector("#message");
+let submitBtn = document.querySelector(".send-btn");
+let date = new Date();
+
+$("#msg-form").on("submit", function (event) {
+  event.preventDefault(); // prevent reload
+  submitBtn.innerText = "Sending your message...";
+
+  var formData = new FormData(this);
+  formData.append("service_id", "service_i5lafl6");
+  formData.append("template_id", "template_sv89sdr");
+  formData.append("user_id", "ET9Wf41T8Ynk-Oeld");
+
+  $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+    type: "POST",
+    data: formData,
+    contentType: false, // auto-detection
+    processData: false, // no need to parse formData to string
+  })
+    .done(function () {
+      submitBtn.innerText = "Send";
+      alert("Your message has been submitted!");
+    })
+    .fail(function (error) {
+      alert("Oops... Please try again!");
+    });
 });
